@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterBloc extends Bloc<CounterEvent,int>{
   CounterBloc(super.initialState){
-    on<incrementCountEvent>((event,emit){
-      emit(state+1);
-    });
+    // on<incrementCountEvent>((event,emit){
+    //   emit(state+1);
+    // });
 
     on<decrementCountEvent>((event, emit){
      if(state>0){
@@ -14,9 +14,9 @@ class CounterBloc extends Bloc<CounterEvent,int>{
     });
 
 
-    // on<incrementCountEvent>((event,emit){
-    //   emit(state+event.value);
-    // });
+    on<incrementCountEvent>((event,emit){
+      emit(state+event.value);
+    });
 
 
   }

@@ -41,7 +41,7 @@ class MyHomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(onPressed: (){
-            BlocProvider.of<CounterBloc>(context).add(incrementCountEvent());
+            BlocProvider.of<CounterBloc>(context).add(incrementCountEvent(value: 2));
           },
             child: Icon(Icons.add),
           ),
